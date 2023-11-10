@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="wrapperDiv">
+        <div id="wrapperDivcontent">
+            <div class="headerDiv">
+                <div class="headercontent">
+                    <p class="font30 fontweight700">Kanban Board</p>
+                    <p class="font15">Review and track your progress made easy</p>
+                </div>
+                <div class="headerbtn">
+                    <button class="font25 addbtn">Create New Task</button>
+                </div>
+            </div>
+            <div class="mainBoardArea">
+                <div class="newTodo width25 height-fit-content">
+                    <div class="taskHeader">
+                        <p class="fontweight700">To-Do Tasks</p>
+                    </div>
+                    <div class="borderstyle"></div>
+    
+                </div>
+                <div class="inProgress width25 height-fit-content">
+                    <div class="taskHeader">
+                        <p class="fontweight700">In-Progress Tasks</p>
+                    </div>
+                    <div class="borderstyle"></div>
+
+    
+                </div>
+                <div class="inReview width25 height-fit-content">
+                    <div class="taskHeader">
+                        <p class="fontweight700">In-Review Tasks</p>
+                    </div>
+                    <div class="borderstyle"></div>
+
+    
+                </div>
+                <div class="completedTask width25 height-fit-content">
+                    <div class="taskHeader">
+                        <p class="fontweight700">Task Completed</p>
+                    </div>
+                    <div class="borderstyle"></div>
+
+    
+                </div>
+            </div>
+        </div>
+        <!-- form open-->
+        <div class="Oform hideform">
+            <div class="formHeader">
+                <p class="fontweight700">Create New Task</p>
+                <i class="fa fa-close closebtn" style="font-size:36px"></i>
+            </div>
+    
+            <textarea id="inputarea" class="inputarea" rows="4" cols="50"></textarea>
+    
+            <div>
+                <label for="priorities">Choose a Priortity:</label>
+                <select id="priorities" name="prioritiesselect">
+                    <option id="critical" value="critical">Critical</option>
+                    <option id="high" value="high">High</option>
+                    <option id="medium" value="medium">Medium</option>
+                    <option id="low" value="low">Low</option>
+                </select>
+    
+            </div>
+            <div>
+                <label for="taskdef">Task to be Added in :</label>
+                <select id="taskdef" name="taskdefselect">
+                    <option id="todo" value="todo">To-Do</option>
+                    <option id="inprogress" value="inprogress">In-Progress</option>
+                    <option id="inreview" value="inreview">In-Review</option>
+                    <option id="taskdone" value="taskdone">Done</option>
+                </select>
+            </div>
+            <button class="submitBtn font25" type="button">Submit</button>
+        </div>
+    </div>
+  
+
+
+    <script type='text/javascript' src="indexN.js"></script>
+
+
+    <!-- <script type='text/javascript' src="index.js"></script> -->
+</body>
+
+</html>
