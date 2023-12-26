@@ -40,12 +40,19 @@ body{
     border: 4px #94A684 solid;
     border-radius: 25px;  
 }
+#wrapperDivcontent{
+    display: flex;
+    flex-direction: column;
+}
+
 /* CSS for Header Div */
+
 
 .headerDiv{
     display: flex;
     margin: 20px 30px;
 }
+
 .headerDiv .headercontent{
     width: 75%;
 }
@@ -71,7 +78,14 @@ body{
 .mainBoardArea{
     display: flex;
     margin:20px 30px ;
-    gap: 10px
+    gap: 10px;
+    flex-direction: column;
+}
+@media screen and (min-width: 960px) {
+    .mainBoardArea {
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+    }
 }
 .mainBoardArea .newTodo{
     text-align: center;
@@ -88,7 +102,6 @@ body{
     border-radius: 20px;
     color:#404839;
     cursor:default;
-
 }
 .mainBoardArea .inReview{
     text-align: center;
@@ -107,6 +120,11 @@ body{
     color:#404839;
     
 }
+@media screen and (min-width: 960px) {
+    .mainBoardArea > div {
+        width: 50%;
+    }
+}
 .taskHeader{
     padding: 20px;
 }
@@ -118,6 +136,17 @@ body{
     margin-right: 10px;
     }
 
+.prioritytags{
+    width:10%;
+    display: flex;
+    align-items: center;
+}
+.prioritytags div{
+    width: 8px;
+    border-radius: 20px;
+    height: 80%;
+    margin-left: 2px;
+}
 
 /* New Form Button */
 
@@ -160,37 +189,39 @@ body{
     font-size: 18px;
 }
 
-
 /* Card Css */
 /* card css */
 .taskcontent{
     display: flex;
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
 } 
 .textContentArea{
     width: 70%;
     overflow: hidden;
-}
-.taskcontent .iconDiv{
-    width: 30%;
+    text-align: justify;
+} 
+.taskcontent .iconDiv {
+    width: 20%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .icon-pen,.icon-trash,.icon-draf{
     width: 33%;
     cursor: pointer;
 }
+
 .critical{
-   border:4px solid #636363;
-   border-radius: 50px;
+   border:4px solid #d83b3b;
 }
 .high{
-    border: 4px solid #d83b3b;
+    border: 4px solid #FFFF5C;
 }
 .medium{
-    border:4px solid #3c0808;
+    border:4px solid #7EC8E3;
 }
 .low{
-    border:4px solid #b838af;
+    border:4px solid #636363;
 }

@@ -106,7 +106,7 @@ wrapperdivRef.addEventListener("click", function (e) {
 function formopenclose(target,dataitem) {
     if(dataitem){
         const data = JSON.parse(dataitem)[0];
-        console.log(data.uniqueIdvalue);
+        // console.log(data.uniqueIdvalue);
         if(target.classList.contains("icon-pen")){
             inputRef.value = data.inputValue;
             document.querySelector(`#${data.priorityValue}`).selected="true";
@@ -117,7 +117,7 @@ function formopenclose(target,dataitem) {
     }
     if(target.classList.contains("submitBtn")){
         const inputRefAttribute =  inputRef.getAttribute("data-id");  
-        console.log(inputRefAttribute);  
+        // console.log(inputRefAttribute);  
         // update the data while Editing
         if(inputRefAttribute){
         localStorage.removeItem(`${inputRefAttribute}`);
@@ -175,15 +175,20 @@ function appendDiv(taskJson){
 const myArrowFunction = (input_value, prioritiesRef_value, tasdefRef_value, uniqueId) => {
     const divele = document.createElement('div');
     const divtext = document.createElement('div');
+    const divtag = document.createElement('div');
     const ptext = document.createElement('p');
     const icons = document.createElement('div');
     const pentext = document.createElement('p');
     const trash = document.createElement('p');
+    const spandiv = document.createElement('div');
     // const drag = document.createElement('p');
     divele.setAttribute("data-uniqueID", `${uniqueId}`);
     divele.classList.add('taskcontent',`${prioritiesRef_value}`);
     divtext.classList.add('textContentArea',`${tasdefRef_value}`);
     icons.classList.add('iconDiv');
+    divtag.classList.add('prioritytags');
+    spandiv.classList.add(`${prioritiesRef_value}`);
+    divtag.appendChild(spandiv);
     icons.appendChild(pentext);
     icons.appendChild(trash);
     // icons.appendChild(drag);
@@ -191,13 +196,13 @@ const myArrowFunction = (input_value, prioritiesRef_value, tasdefRef_value, uniq
     trash.classList.add('fa','fa-trash-o','icon-trash');
     // drag.classList.add('fa','fa-hand-rock-o','icon-drag');
     divtext.appendChild(ptext);
+    divele.appendChild(divtag);
     divele.appendChild(divtext);
     divele.appendChild(icons);
     // drag.setAttribute("draggable", true);
-
-// Add this line to make the element draggable
-divele.setAttribute("draggable", true);
-// divele.addEventListener("dragstart", handleDragStart);
+    // Add this line to make the element draggable
+    divele.setAttribute("draggable", true);
+    // divele.addEventListener("dragstart", handleDragStart);
     ptext.innerText = input_value;
     return divele;
 };
@@ -206,7 +211,6 @@ divele.setAttribute("draggable", true);
 
 
 function setDefaultVal(){
-    // const data = JSON.parse(localdata)[0];
     inputRef.value = " ";
     document.querySelector(`#critical`).selected="true";
     document.querySelector(`#todo`).selected = "true";

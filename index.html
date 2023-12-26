@@ -12,6 +12,7 @@
 <body>
     <div id="wrapperDiv">
         <div id="wrapperDivcontent">
+            <!-- Header Area -->
             <div class="headerDiv">
                 <div class="headercontent">
                     <p class="font30 fontweight700">Kanban Board</p>
@@ -21,37 +22,38 @@
                     <button class="font25 addbtn">Create New Task</button>
                 </div>
             </div>
+            <!-- Board Area -->
             <div class="mainBoardArea">
-                <div class="newTodo width25 height-fit-content">
+                <div class="newTodo  height-fit-content">
                     <div class="taskHeader">
                         <p class="fontweight700">To-Do Tasks</p>
                     </div>
                     <div class="borderstyle"></div>
-    
+
                 </div>
-                <div class="inProgress width25 height-fit-content">
+                <div class="inProgress  height-fit-content">
                     <div class="taskHeader">
                         <p class="fontweight700">In-Progress Tasks</p>
                     </div>
                     <div class="borderstyle"></div>
 
-    
+
                 </div>
-                <div class="inReview width25 height-fit-content">
+                <div class="inReview  height-fit-content">
                     <div class="taskHeader">
                         <p class="fontweight700">In-Review Tasks</p>
                     </div>
                     <div class="borderstyle"></div>
 
-    
+
                 </div>
-                <div class="completedTask width25 height-fit-content">
+                <div class="completedTask  height-fit-content">
                     <div class="taskHeader">
                         <p class="fontweight700">Task Completed</p>
                     </div>
                     <div class="borderstyle"></div>
 
-    
+
                 </div>
             </div>
         </div>
@@ -61,9 +63,9 @@
                 <p class="fontweight700">Create New Task</p>
                 <i class="fa fa-close closebtn" style="font-size:36px"></i>
             </div>
-    
+
             <textarea id="inputarea" class="inputarea" rows="4" cols="50"></textarea>
-    
+
             <div>
                 <label for="priorities">Choose a Priortity:</label>
                 <select id="priorities" name="prioritiesselect">
@@ -72,7 +74,7 @@
                     <option id="medium" value="medium">Medium</option>
                     <option id="low" value="low">Low</option>
                 </select>
-    
+
             </div>
             <div>
                 <label for="taskdef">Task to be Added in :</label>
@@ -86,7 +88,7 @@
             <button class="submitBtn font25" type="button">Submit</button>
         </div>
     </div>
-  
+
 
 
     <script type='text/javascript' src="indexN.js"></script>
